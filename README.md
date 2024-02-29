@@ -21,7 +21,7 @@ Ticket34 is a web application project aimed at providing an efficient and user-f
    - Capability to create and manage tickets specifically for products.
 
 ### 4. Notifications
-   - Notifications for ticket updates and important announcements.
+   - Notifications for ticket's messages.
 
 ### 5. Reporting and Analytics
    - Comprehensive reporting tools for administrators.
@@ -52,10 +52,6 @@ Ticket34 is a web application project aimed at providing an efficient and user-f
 ### Manager WorkersList
 ![WorkersList](screens/WorkersList.png)
 *Description: Overview of the manager's list of workers.*
-
-### Create Ticket
-![Create Ticket](screens/create_ticket.png)
-*Description: Intuitive ticket creation form with relevant fields.*
 
 ### Details Ticket
 ![Details Ticket](screens/TicketDetails.png)
