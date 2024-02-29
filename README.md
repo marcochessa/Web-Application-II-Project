@@ -63,4 +63,4 @@ Ticket34 is a web application project aimed at providing an efficient and user-f
 
 ### Chat
 ![Chat](screens/UserChat.png)
-*Description: Customizable notification preferences for users.*
+*Description: Users's chat view.*
