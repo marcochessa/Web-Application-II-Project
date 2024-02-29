@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: ServiceNow-G34
+    observer_host: host.docker.internal
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/WA2_G34
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+
+logging:
+  level:
+    org.springframework.security: WARN
+    it.polito.wa2.g34.server: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0 # sampling all in dev, reduce it in prod to save loading
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  zipkin:
+    tracing:
+      endpoint: "http://${spring.application.observer_host}:9411/api/v2/spans"
